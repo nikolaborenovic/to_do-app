@@ -1,0 +1,13 @@
+.home_main {
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+ 
+.home_main h1, h2 {
+    margin: 0px;
+    text-align: center;
+}
