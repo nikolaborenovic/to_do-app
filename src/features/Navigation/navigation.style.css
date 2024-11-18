@@ -24,3 +24,21 @@
     gap: 30px;
     margin: auto;
 }
+.tasklist_navigation {
+    position: relative;
+}
+
+.navigation_links span {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 0;
+    right: -20px;
+}
