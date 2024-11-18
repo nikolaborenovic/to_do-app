@@ -2,8 +2,8 @@ import DeleteImg from '../../../assets/delete.png'
 import EditImg from '../../../assets/edit.png'
 import '../list.style.css'
 
-const ToDoItem = () => {
-
+const ToDoItem = ({task}) => {
+    console.log(task, 'jedan item')
     return(
         <div className='item_holder'>
             <div className='item_text'>
@@ -17,11 +17,11 @@ const ToDoItem = () => {
             width={30}
             height={30}
             stroke="#22C55E"
-            fill='#FFFFFF'
+            fill={task.isCompleted ? '#22C55E' : '#ffffff'}
             >
                 <circle cx="11.998" cy="11.998" fillRule="nonzero" r="9.998" />
                 </svg>
-                <p>Task 1!</p>
+                <p>{task.title}</p>
             </div>
             <div className='task_img'>
                 <img src={EditImg}/>
