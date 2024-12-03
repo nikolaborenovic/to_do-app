@@ -19,5 +19,13 @@ export const useToDoStore = create((set, get) => ({
             todo.id === idMarkedCompleted ? {...todo, isCompleted: !todo.isCompleted} : todo
         );
         set({ todoList: markedToDoCompleted })
+    },
+
+    todoEdit: (id, editedTitle) => {
+        const allToDo = get().todoList;
+        const idForEdit = allToDo.map((todo) =>
+            todo.id ===id ? {...todo, title: editedTitle} : todo
+        );
+        set({ todoList: idForEdit })
     }
 }))
